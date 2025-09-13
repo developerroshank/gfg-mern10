@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Button Problem | Closure</title>
+  <style>
+    .btn {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="red" class="btn">Red</button>
+  <button id="green" class="btn">Green</button>
+
+
+  <script>
+
+    // Closures
+    function clickButton(color) {
+
+      function changeColor() {
+        document.body.style.backgroundColor = `${color}`;
+      }
+
+      return changeColor;
+    }
+
+    document.getElementById("red").onclick = clickButton("red");
+    document.getElementById("green").onclick = clickButton("green");
+
+  </script>
+</body>
+
+</html>
