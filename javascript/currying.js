@@ -5,7 +5,7 @@
 // autoMail("abc@gmail.com", "Test Mail", "thank you for shopping with us");
 
 
-// functional programming approch --- currying
+// functional programming approach --- currying
 
 function autoMailer(to) {
   return function (subject) {
