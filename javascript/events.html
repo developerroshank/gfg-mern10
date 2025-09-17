@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .grand-parent {
+            background-color: lightblue;
+            width: 500px;
+            height: 500px;
+        }
+        .parent {
+            background-color: lightgreen;
+            width: 400px;
+            height: 400px;
+        }
+        .child {
+            background-color: lightcoral;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let grandParent = document.querySelector(".grand-parent");
+        let parent = document.querySelector(".parent");
+        let child = document.querySelector(".child");
+
+        grandParent.addEventListener('click', (e) => {
+            e.stopPropagation()
+            console.log(e)
+            console.log('Grandparent clicked!!')
+        });
+        parent.addEventListener('click', (e) => {
+            e.stopPropagation()
+            console.log('parent clicked!!')
+        });
+        child.addEventListener('click', (e) => {
+            e.stopPropagation()
+            console.log('child clicked!!')
+        });
+    </script>
+</body>
+</html>
