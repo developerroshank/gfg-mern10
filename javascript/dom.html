@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>this is targeted by tagname</h1>
+        <h1>this is again by tagname</h1>
+        <h1>this is again by tagname</h1>
+    
+        <h2 class="heading-1">this is heading 1 by class</h2>
+        <h1 id="heading-id">this is heading 1 by id</h1>
+
+        <img src="../images/photo-1.jpg" alt="img" id="img" width="500px">
+    </div>
+
+    <script>
+        // const res = document.getElementsByTagName('h1');
+        // const res = document.getElementById('heading-id');
+        // const res = document.getElementsByClassName('heading-1');
+
+        // const res = document.getElementsByClassName('heading-1');
+
+        // console.log(res)
+
+
+        // creation of  element or node
+
+        // let para = document.createElement('p')
+        // para.innerText = "this is paragragraph by script"
+        // para.classList.add('hello');
+
+        // document.body.appendChild(para)
+
+
+
+        // children nodes
+
+        const container = document.querySelector(".container");
+        console.log(container);
+
+        const img = document.querySelector('img');
+        img.setAttribute('src', 'https://images.pexels.com/photos/33851801/pexels-photo-33851801.jpeg');
+        // img.removeAttribute('src');
+
+        document.body.appendChild(img)
+
+    </script>
+</body>
+</html>
