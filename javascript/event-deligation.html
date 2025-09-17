@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: lightgreen;
+            width: 800px;
+            height: 400px;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .child {
+            width: 150px;
+            height: 150px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-4">child 4</div>
+    </div>
+    <p class="data"></p>
+
+    <script>
+        let container = document.querySelector('.container')
+        let para = document.querySelector('.data')
+        container.addEventListener('click', (e) => {
+
+            console.log('container clicked' + ' ' + e.target.className)
+            para.innerText = e.target.innerText
+        })
+        
+    </script>
+    
+</body>
+</html>
